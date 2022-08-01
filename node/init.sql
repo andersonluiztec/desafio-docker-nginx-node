@@ -1,0 +1,8 @@
+CREATE DATABASE IF NOT EXISTS nodedb;
+
+USE nodedb;
+CREATE TABLE IF NOT EXISTS peoples (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  name varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);

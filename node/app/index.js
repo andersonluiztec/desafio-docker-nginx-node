@@ -24,7 +24,7 @@ app.get('/', async function (req, res) {
     {
         retorno = '<h1>Full Cycle Rocks!</h1><br><br>';
 
-        await db.query(`INSERT INTO peoples(name) values (CONCAT('Anderson ', CAST((SELECT count(*) + 1 as qtde FROM peoples as temp) AS CHAR)))`)
+        await db.query(`INSERT INTO peoples(name) values (CONCAT('People ', CAST((SELECT count(*) + 1 as qtde FROM peoples as temp) AS CHAR)))`)
         console.log('Dado Inserido...')
 
         const peoples = await db.query(`SELECT * FROM peoples`);
